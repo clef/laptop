@@ -1,0 +1,21 @@
+
+brew tap homebrew/versions
+brew install caskroom/cask/brew-cask
+
+brew install python
+
+brew cask install google-chrome
+brew cask install sublime-text3
+brew cask install slack
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install google-drive
+brew cask install dash
+
+brew cleanup
+
+npm install gulp -g
+gem install sass
+
+easy_install pip
+pip install virtualenvwrapper
