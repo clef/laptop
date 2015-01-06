@@ -123,7 +123,6 @@ brew_install_or_upgrade 'mysql'
 
 fancy_echo "Restarting mysql ..."
   brew_launchctl_restart mysql
-  mysql.server start
 
 brew_install_or_upgrade 'redis'
 brew_install_or_upgrade 'the_silver_searcher'
