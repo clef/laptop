@@ -19,4 +19,9 @@ npm install gulp -g
 gem install sass
 
 easy_install pip
+
+# Installs virtualenv and sets up virtualenvwrapper
 pip install virtualenvwrapper
+echo "\n# virtualenvwrapper configuration"
+echo "export WORKON_HOME=$HOME/.virtualenvs" >> ~/.zshrc
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.zshrc
