@@ -1,6 +1,7 @@
 
 brew tap homebrew/versions
 brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
 
 brew install python
 
