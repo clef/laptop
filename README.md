@@ -26,7 +26,7 @@ Download, review, then execute the script:
 ```sh
 curl --remote-name https://raw.githubusercontent.com/clef/laptop/master/mac
 less mac
-bash mac 2>&1 | tee ~/laptop.log
+sh mac 2>&1 | tee ~/laptop.log
 ```
 
 Debugging
@@ -49,7 +49,6 @@ What it sets up
 * [Homebrew] for managing operating system libraries
 * [ImageMagick] for cropping and resizing images
 * [Node.js] and [NPM], for running apps and installing JavaScript packages
-* [NVM] for managing versions of Node.js
 * [Postgres] for storing relational data
 * [Qt] for headless JavaScript testing via Capybara Webkit
 * [Rbenv] for managing versions of Ruby
@@ -70,7 +69,6 @@ What it sets up
 [ImageMagick]: http://www.imagemagick.org/
 [Node.js]: http://nodejs.org/
 [NPM]: https://www.npmjs.org/
-[NVM]: https://github.com/creationix/nvm
 [Postgres]: http://www.postgresql.org/
 [Qt]: http://qt-project.org/
 [Rbenv]: https://github.com/sstephenson/rbenv
@@ -94,14 +92,14 @@ For example:
 ```sh
 #!/bin/sh
 
-brew tap caskroom/cask
-brew install brew-cask
+brew_tap 'caskroom/cask'
+brew_install_or_upgrade 'brew-cask'
 
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install rdio
 
-gem install parity
+gem_install_or_update 'parity'
 
 brew_install_or_upgrade 'tree'
 brew_install_or_upgrade 'watch'
@@ -115,15 +113,8 @@ Laptop functions such as `fancy_echo`,
 `gem_install_or_update`
 can be used in your `~/.laptop.local`.
 
-Credits
--------
-
-![thoughtbot](http://thoughtbot.com/assets/tm/logo.png)
-
-Laptop is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community).
-The names and logos for thoughtbot are trademarks of thoughtbot, inc.
-
-Thank you, [contributors](https://github.com/thoughtbot/laptop/graphs/contributors)!
+See the [wiki](https://github.com/thoughtbot/laptop/wiki)
+for more customization examples.
 
 Contributing
 ------------
@@ -132,15 +123,42 @@ Edit the `mac` file.
 Document in the `README.md` file.
 Follow shell style guidelines by using [ShellCheck] and [Syntastic].
 
-```bash
+```sh
 brew install shellcheck
 ```
 
 [ShellCheck]: http://www.shellcheck.net/about.html
 [Syntastic]: https://github.com/scrooloose/syntastic
 
+Thank you, [contributors]!
+
+[contributors]: https://github.com/thoughtbot/laptop/graphs/contributors
+
+By participating in this project,
+you agree to abide by the thoughtbot [code of conduct].
+
+[code of conduct]: https://thoughtbot.com/open-source-code-of-conduct
+
 License
 -------
 
-Laptop is © 2011-2014 thoughtbot, inc. It is free software, and may be
-redistributed under the terms specified in the LICENSE file.
+Laptop is © 2011-2015 thoughtbot, inc.
+It is free software,
+and may be redistributed under the terms specified in the [LICENSE] file.
+
+[LICENSE]: LICENSE
+
+About thoughtbot
+----------------
+
+![thoughtbot](https://thoughtbot.com/logo.png)
+
+Laptop is maintained and funded by thoughtbot, inc.
+The names and logos for thoughtbot are trademarks of thoughtbot, inc.
+
+We are passionate about open source software.
+See [our other projects][community].
+We are [available for hire][hire].
+
+[community]: https://thoughtbot.com/community?utm_source=github
+[hire]: https://thoughtbot.com?utm_source=github
